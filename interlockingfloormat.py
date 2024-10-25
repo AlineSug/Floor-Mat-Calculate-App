@@ -12,7 +12,7 @@ SS = '''
     md_bg_color: "darkorange"
     MDLabel:
         id: label
-        text: 'How many Interlocking Floor Mat might you need?'
+        text: 'How many interlocking floor mat might need?'
         haligh: "center"
         pos_hint: {"center_x": 0.55, "center_y": 0.95}
         theme_text_color: "Custom"
@@ -20,7 +20,7 @@ SS = '''
     
     MDTextField:
         id: l_input
-        hint_text: "How Much Meters  "
+        hint_text: "How many meters? "
         pos_hint: {"center_x": 0.5, "center_y": 0.77}
         size_hint_x: 0.8
         mode: "rectangle"
@@ -30,7 +30,7 @@ SS = '''
         
     MDTextField:
         id: h_input
-        hint_text: "Of How Much meters?"
+        hint_text: "Of how many meters?"
         pos_hint: {"center_x": 0.5, "center_y": 0.67}
         size_hint_x: 0.8
         mode: "rectangle"
@@ -41,7 +41,7 @@ SS = '''
 
     MDTextField:
         id: d_input
-        hint_text: "How much cm is the side of floor Mat?"
+        hint_text: "Floor mat side size in cm?"
         pos_hint: {"center_x": 0.5, "center_y": 0.87}
         size_hint_x: 0.8
         mode: "rectangle"
@@ -54,7 +54,7 @@ SS = '''
         md_bg_color: "brown"
         theme_text_color: "Custom"
         text_color: "white"
-        on_release: root.calcular()
+        on_release: root.calculate()
         
     MDLabel:
         id: result
@@ -75,15 +75,16 @@ SS = '''
 '''
 
 class MainScreen(MDScreen):
-    def calcular(self):
+
+    def calculate(self):
         try:
             l = int(self.ids.l_input.text)
             h = int(self.ids.h_input.text)
             d = int(self.ids.d_input.text)
 
-            quadrado = d*d
+            square = d*d
             result = l * h
-            result2 = quadrado/10000
+            result2 = square/10000
             result3 = int((result / result2)+1)
 
             self.ids.result.text = f"You Might Need: {result3} Floor Mat"
