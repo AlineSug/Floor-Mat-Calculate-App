@@ -5,3 +5,5 @@ This tool is convenient and saves users the hassle of manual calculations, ensur
 I also created the app's artwork, giving it a unique and personalized look. 
 This tool offers convenience and style, making it easier for users to plan their space efficiently and with a personalized touch.
 
+<img width="350" alt="Captura de Tela 2024-10-25 às 20 47 33" src="https://github.com/user-attachments/assets/db156617-81f5-4976-a89f-0b282f46b557">
+
